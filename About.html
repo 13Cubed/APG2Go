@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script type="text/javascript">
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return(false);
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'>
+            <link href="Style.css" media="screen" rel="Stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td width="100%" align="left">
+                        <center><img src="About-Icon.png" width="90" height="90"><h2>APG 2Go</h2></center>
+                        APG 2Go generates passwords with two (2) to eight (8) random common dictionary words. It displays length and approximate bits of entropy.
+                        
+                        <h2><u>FAQ</u></h2>
+                        
+                        <h3>How many words are included in the default word list?</h3>
+                        4,701
+                        
+                        <h3>What is the origination of the word list?</h3>
+                        This word list was obtained from Trinity College Department of Computer Science Cryptology Resources Index. Words less than 4 characters in length and contractions have been removed from the list included in APG 2Go.
+                        
+                        <h3>What random number mechanism does APG 2Go use and how is it seeded?</h3>
+                        APG 2Go uses the newer arc4random() function as opposed to rand() or random(). This function is self-seeding and uses a superior algorithm.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td width="100%" align="center"><b><font color="#000">APG 2Go</font></b><br>
+                        <script type="text/javascript">
+                            var version = getQueryVariable("version")
+                            var build = getQueryVariable("build")
+                            document.write('Version ' + version + ' ' + '(' + build + ')');
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center">Richard Davis<br><a href="mailto:info@13cubed.com">info@13cubed.com</a></td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center">In-app icons licensed from:<br>Iconshock (www.iconshock.com)</td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center">Copyright &copy; <script>document.write(new Date().getFullYear());</script> 13Cubed.<br>All rights reserved.</td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center"><img src="13Cubed.png" width="200" height="44" border="0"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
